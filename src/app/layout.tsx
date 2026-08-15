@@ -17,19 +17,58 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
+const title = "Vukašin Riznić — Web Developer";
+const description =
+  "Web developer koji dizajnira i razvija brze, pristupačne sajtove i web aplikacije, izrađene da traju.";
+const siteUrl = "https://www.vukasinriznic.me";
+
 export const metadata: Metadata = {
-  title: "Vukašin Riznić — Web Developer",
-  description:
-    "Web developer building fast, accessible and thoughtfully designed websites.",
+  metadataBase: new URL(siteUrl),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: "Vukašin Riznić",
+    images: [{ url: "/images/vukasin_hero.png", width: 1254, height: 1254 }],
+    locale: "sr_RS",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/images/vukasin_hero.png"],
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Vukašin Riznić",
+  jobTitle: "Web Developer",
+  url: siteUrl,
+  image: `${siteUrl}/images/vukasin_hero.png`,
+  sameAs: [
+    "https://www.aferadigital.rs",
+    "https://www.instagram.com/vukasinrizniic/",
+    "https://www.linkedin.com/in/vukasinriznic/",
+    "https://github.com/vukasinriznic",
+  ],
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang="sr"
       className={`${syne.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col cursor-none bg-background text-foreground">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <SmoothScroll />
         <Cursor />
         {children}

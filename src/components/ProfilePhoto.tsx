@@ -19,7 +19,7 @@ export function ProfilePhoto({ src }: { src: string | null }) {
   return (
     <Image
       src={src}
-      alt="Vukašin Riznić"
+      alt="Vukašin Riznić — Web Developer"
       fill
       priority
       sizes="(min-width: 1024px) 46rem, (min-width: 640px) 38rem, 30rem"

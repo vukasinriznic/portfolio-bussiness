@@ -137,8 +137,8 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
           </motion.h2>
 
           <motion.p variants={item} className="-mt-5 max-w-[26rem] text-[14px] leading-relaxed text-[#525252]">
-            I design and build fast, accessible websites and web apps that
-            feel simple to use and are built to last.
+            Dizajniram i razvijam brze, pristupačne sajtove i web aplikacije
+            koje su jednostavne za korišćenje i napravljene da traju.
           </motion.p>
 
           <motion.a
@@ -146,7 +146,7 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
             href="#contact"
             className="group mt-2 flex w-full max-w-[280px] items-center justify-center gap-2.5 rounded-full bg-foreground px-6 py-[14px] text-[15px] font-normal text-background shadow-[0_4px_5px_rgba(0,0,0,0.2)] transition-colors hover:bg-foreground/85"
           >
-            Let&apos;s collaborate
+            Započnimo saradnju
             <Image
               src="/top-right.png"
               alt=""
@@ -206,14 +206,14 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
             Web developer
           </h2>
           <p className="pointer-events-auto mt-2 max-w-[26rem] text-base leading-relaxed text-[#525252]">
-            I design and build fast, accessible websites and web apps that feel
-            simple to use and are built to last.
+            Dizajniram i razvijam brze, pristupačne sajtove i web aplikacije
+            koje su jednostavne za korišćenje i napravljene da traju.
           </p>
           <a
             href="#contact"
             className="group pointer-events-auto mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-base font-normal text-background transition-colors hover:bg-foreground/85"
           >
-            Let&apos;s collaborate
+            Započnimo saradnju
             <Image
               src="/top-right.png"
               alt=""
