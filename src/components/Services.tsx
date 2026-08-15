@@ -38,13 +38,13 @@ export function Services() {
                 onClick={() => {
                   if (!isOpen) setOpenIndex(index);
                 }}
-                className={`relative cursor-pointer overflow-hidden border-b border-foreground last:border-b-0 transition-all ${ACCORDION_EASE_CSS} ${
+                className={`relative cursor-pointer overflow-hidden border-b border-[#525252] last:border-b-0 transition-all ${ACCORDION_EASE_CSS} ${
                   isOpen ? "rounded-xl bg-[#262626]" : "bg-transparent hover:bg-[#EEEEEE]"
                 }`}
               >
                 <div
-                  className={`flex items-center justify-between gap-4 px-[30px] pt-6 transition-all ${ACCORDION_EASE_CSS} lg:pt-[48px] ${
-                    isOpen ? "pb-4 lg:pb-6" : "pb-6 lg:pb-[48px]"
+                  className={`flex items-center justify-between gap-4 px-[30px] pt-7 transition-all ${ACCORDION_EASE_CSS} lg:pt-[48px] ${
+                    isOpen ? "pb-5 lg:pb-6" : "pb-7 lg:pb-[48px]"
                   }`}
                 >
                   <span
