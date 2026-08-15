@@ -97,7 +97,7 @@ export function About() {
           >
             <p
               ref={wordsRef}
-              className="font-sans text-left text-[30px] font-medium uppercase leading-tight tracking-normal text-white sm:text-[36px] lg:text-[60px]"
+              className="font-sans text-left text-[32px] font-medium uppercase leading-tight tracking-normal text-white sm:text-[36px] lg:text-[60px]"
             >
               {paragraphWords.map((word, i) => (
                 <span
