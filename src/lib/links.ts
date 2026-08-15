@@ -1,8 +1,8 @@
 export const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "Service", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projekti", href: "#work" },
+  { label: "Usluge", href: "#services" },
+  { label: "O meni", href: "#about" },
+  { label: "Kontakt", href: "#contact" },
 ];
 
 export const socialLinks = [

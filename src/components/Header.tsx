@@ -8,8 +8,8 @@ import { navLinks } from "@/lib/links";
 import { projects, services } from "@/lib/data";
 
 const navCounts: Record<string, number> = {
-  Work: projects.length,
-  Service: services.length,
+  Projekti: projects.length,
+  Usluge: services.length,
 };
 
 const HEADER_HEIGHT = 64;
@@ -64,7 +64,7 @@ export function Header() {
           href="#contact"
           className="group hidden items-center gap-2 rounded-full bg-foreground px-6 py-3 text-base font-normal text-background transition-colors hover:bg-foreground/85 md:inline-flex"
         >
-          Let&apos;s Talk
+          Pišite mi
           <Image
             src="/top-right.png"
             alt=""
@@ -77,7 +77,7 @@ export function Header() {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
+          aria-label="Otvori/zatvori meni"
           className="relative flex h-11 w-11 flex-col items-end justify-center gap-[5px] md:hidden"
         >
           <motion.span
