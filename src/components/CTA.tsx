@@ -48,7 +48,7 @@ export function CTA() {
 
       <div
         style={{ maxWidth: "var(--name-width, 80rem)" }}
-        className="relative w-full pt-2 sm:pt-8"
+        className="relative mt-auto w-full pt-2 sm:pt-8"
       >
         <SocialLinks
           direction="row"
