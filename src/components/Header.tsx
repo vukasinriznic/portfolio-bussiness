@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { AvailabilityBadge } from "@/components/AvailabilityBadge";
@@ -12,13 +12,36 @@ const navCounts: Record<string, number> = {
   Service: services.length,
 };
 
+const HEADER_HEIGHT = 64;
+
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    const aboutEl = document.getElementById("about");
+    if (!aboutEl) return;
+
+    const onScroll = () => {
+      const rect = aboutEl.getBoundingClientRect();
+      setDark(rect.top <= HEADER_HEIGHT && rect.bottom > 0);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
 
   return (
     <header
       style={{ maxWidth: "var(--name-width, 80rem)" }}
-      className="fixed inset-x-0 top-0 z-30 mx-auto flex h-16 w-full items-center justify-between gap-4 bg-background px-5 sm:absolute sm:h-auto sm:bg-transparent sm:px-10 sm:py-8 md:grid md:grid-cols-[auto_1fr_auto]"
+      className={`fixed inset-x-0 top-0 z-30 mx-auto flex h-16 w-full items-center justify-between gap-4 px-5 transition-colors duration-300 sm:absolute sm:h-auto sm:bg-transparent sm:px-10 sm:py-8 md:grid md:grid-cols-[auto_1fr_auto] ${
+        dark ? "bg-[#262626]" : "bg-background"
+      }`}
     >
       <div className="flex items-center gap-3">
         <AvailabilityBadge />
@@ -60,17 +83,17 @@ export function Header() {
           <motion.span
             animate={{ rotate: open ? 45 : 0, y: open ? 7 : 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="block h-[2px] w-6 origin-center rounded-full bg-foreground"
+            className={`block h-[2px] w-6 origin-center rounded-full transition-colors duration-300 ${dark ? "bg-white" : "bg-foreground"}`}
           />
           <motion.span
             animate={{ opacity: open ? 0 : 1, width: open ? 0 : 24 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="block h-[2px] rounded-full bg-foreground"
+            className={`block h-[2px] rounded-full transition-colors duration-300 ${dark ? "bg-white" : "bg-foreground"}`}
           />
           <motion.span
             animate={{ rotate: open ? -45 : 0, y: open ? -7 : 0 }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="block h-[2px] w-6 origin-center rounded-full bg-foreground"
+            className={`block h-[2px] w-6 origin-center rounded-full transition-colors duration-300 ${dark ? "bg-white" : "bg-foreground"}`}
           />
         </button>
       </div>
@@ -82,21 +105,29 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute left-0 right-0 top-full z-20 overflow-hidden bg-background md:hidden"
+            className={`absolute left-0 right-0 top-full z-20 overflow-hidden transition-colors duration-300 md:hidden ${
+              dark ? "bg-[#262626]" : "bg-background"
+            }`}
           >
-            <div className="flex flex-col border-b border-border px-5 pb-3">
+            <div
+              className={`flex flex-col border-b px-5 pb-3 ${dark ? "border-white/15" : "border-border"}`}
+            >
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="group flex items-center gap-2 border-b border-border py-[14px] last:border-0"
+                  className={`group flex items-center gap-2 border-b py-[14px] last:border-0 ${dark ? "border-white/15" : "border-border"}`}
                 >
-                  <span className="text-[18px] font-medium text-foreground transition-colors group-hover:text-[#525252]">
+                  <span
+                    className={`text-[18px] font-medium transition-colors ${dark ? "text-white group-hover:text-white/70" : "text-foreground group-hover:text-[#525252]"}`}
+                  >
                     {link.label}
                   </span>
                   {navCounts[link.label] !== undefined && (
-                    <span className="text-[12px] font-semibold text-[#a2a2a2]">
+                    <span
+                      className={`text-[12px] font-semibold ${dark ? "text-white/40" : "text-[#a2a2a2]"}`}
+                    >
                       [{navCounts[link.label]}]
                     </span>
                   )}

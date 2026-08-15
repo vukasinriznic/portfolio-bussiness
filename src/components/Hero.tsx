@@ -80,7 +80,7 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="relative h-[52dvh] w-full overflow-hidden bg-ghost"
+          className="relative h-[52svh] w-full overflow-hidden bg-ghost"
         >
           <div className="absolute inset-0 translate-y-3">
             <ProfilePhoto src={photoSrc} />

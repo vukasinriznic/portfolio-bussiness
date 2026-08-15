@@ -17,7 +17,7 @@ export function CTA() {
       />
 
       <div className="relative flex flex-col items-center gap-6 text-center">
-        <AvailabilityBadge />
+        <AvailabilityBadge fullTextOnMobile />
 
         <div className="flex flex-col items-center gap-1">
           <h2 className="font-sans text-[28px] font-extrabold uppercase leading-tight tracking-tight text-foreground sm:whitespace-nowrap sm:text-[42px] lg:text-[64px]">
