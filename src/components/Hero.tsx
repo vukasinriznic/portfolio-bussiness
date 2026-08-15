@@ -27,7 +27,7 @@ const item = {
     y: 0,
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
-};
+} as const;
 
 const itemText = {
   hidden: { opacity: 0, y: 24 },
@@ -36,7 +36,7 @@ const itemText = {
     y: -44,
     transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
   },
-};
+} as const;
 
 const mobileSocialIcons = {
   home: Home,
