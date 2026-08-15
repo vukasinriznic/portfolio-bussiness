@@ -16,7 +16,7 @@ export function CTA() {
         className="pointer-events-none object-cover"
       />
 
-      <div className="relative flex flex-col items-center gap-6 text-center">
+      <div className="relative flex w-full flex-1 flex-col items-center justify-center gap-6 text-center">
         <AvailabilityBadge fullTextOnMobile />
 
         <div className="flex flex-col items-center gap-1">
@@ -48,7 +48,7 @@ export function CTA() {
 
       <div
         style={{ maxWidth: "var(--name-width, 80rem)" }}
-        className="relative mt-auto w-full pt-2 sm:pt-8"
+        className="relative w-full pt-2 sm:pt-8"
       >
         <SocialLinks
           direction="row"
