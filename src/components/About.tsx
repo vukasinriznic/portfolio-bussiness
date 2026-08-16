@@ -54,7 +54,7 @@ export function About() {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top-=120",
+          start: "top top-=300",
           end: "bottom bottom",
           scrub: 1,
         },
