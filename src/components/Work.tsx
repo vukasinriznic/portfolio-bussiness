@@ -62,6 +62,16 @@ export function Work() {
             </article>
           ))}
         </div>
+
+        <div className="mt-10 flex justify-center sm:mt-12">
+          <a
+            href="#"
+            className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-[15px] font-semibold text-foreground shadow-sm transition-colors hover:bg-white/85 sm:text-base"
+          >
+            Pogledaj sve projekte
+            <Image src="/top-right.png" alt="" width={12} height={12} />
+          </a>
+        </div>
       </div>
     </section>
   );
