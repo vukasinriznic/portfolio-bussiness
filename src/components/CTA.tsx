@@ -32,7 +32,7 @@ export function CTA() {
         </div>
 
         <a
-          href="mailto:riznicvukasin@gmail.com"
+          href="/kontakt"
           className="group mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3 text-[15px] font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md sm:text-base"
         >
           Započnimo saradnju

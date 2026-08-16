@@ -61,7 +61,7 @@ export function Header() {
 
       <div className="flex items-center justify-end gap-3">
         <a
-          href="#contact"
+          href="/kontakt"
           className="group hidden items-center gap-2 rounded-full bg-foreground px-6 py-3 text-base font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md md:inline-flex"
         >
           Pišite mi
