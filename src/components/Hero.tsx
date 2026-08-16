@@ -126,7 +126,7 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
           <motion.a
             variants={item}
             href="#contact"
-            className="group mt-2 flex w-full max-w-[280px] items-center justify-center gap-2.5 rounded-full bg-foreground px-6 py-[14px] text-[15px] font-normal text-background shadow-[0_4px_5px_rgba(0,0,0,0.2)] transition-colors hover:bg-foreground/85"
+            className="group mt-2 flex w-full max-w-[280px] items-center justify-center gap-2.5 rounded-full bg-foreground px-6 py-[14px] text-[15px] font-normal text-background shadow-[0_4px_5px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md"
           >
             Započnimo saradnju
             <Image
@@ -193,7 +193,7 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
           </p>
           <a
             href="#contact"
-            className="group pointer-events-auto mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-base font-normal text-background transition-colors hover:bg-foreground/85"
+            className="group pointer-events-auto mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-6 py-3 text-base font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md"
           >
             Započnimo saradnju
             <Image
