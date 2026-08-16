@@ -84,7 +84,7 @@ export function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative h-[300vh] w-full bg-[#262626] motion-reduce:h-auto"
+      className="relative h-[260vh] w-full bg-[#262626] motion-reduce:h-auto"
     >
       <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden motion-reduce:static motion-reduce:h-auto motion-reduce:min-h-screen motion-reduce:flex-col motion-reduce:gap-10 motion-reduce:overflow-visible motion-reduce:py-24">
         <Logo
