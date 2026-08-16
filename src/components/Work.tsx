@@ -52,7 +52,7 @@ export function Work() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-border bg-white px-5 py-2 text-[13px] font-normal text-[#262626] sm:text-base"
+                      className="rounded-full border border-border bg-white px-4 py-2 text-[13px] font-normal text-[#262626] sm:text-base"
                     >
                       {tag}
                     </span>
