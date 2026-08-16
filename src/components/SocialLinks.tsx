@@ -24,10 +24,13 @@ function SocialLinkItem({ social }: { social: (typeof socialLinks)[number] }) {
   const isPhone = social.icon === "phone";
   const [qrOpen, setQrOpen] = useState(false);
 
+  const canHover = () =>
+    typeof window !== "undefined" &&
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     if (!isPhone) return;
-    const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    if (canHover) {
+    if (canHover()) {
       e.preventDefault();
       setQrOpen((v) => !v);
     }
@@ -40,8 +43,8 @@ function SocialLinkItem({ social }: { social: (typeof socialLinks)[number] }) {
         target={isPhone ? undefined : "_blank"}
         rel={isPhone ? undefined : "noopener noreferrer"}
         onClick={handleClick}
-        onMouseEnter={() => isPhone && setQrOpen(true)}
-        onMouseLeave={() => isPhone && setQrOpen(false)}
+        onMouseEnter={() => isPhone && canHover() && setQrOpen(true)}
+        onMouseLeave={() => isPhone && canHover() && setQrOpen(false)}
         className="flex items-center gap-2.5 rounded-full border border-border bg-white py-2 pl-2 pr-4 text-base font-normal text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md"
       >
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost">
