@@ -6,7 +6,7 @@ export function CTA() {
   return (
     <section
       id="contact"
-      className="relative flex min-h-screen w-full flex-col items-center justify-center gap-12 overflow-hidden bg-surface px-5 pb-[64px] pt-[64px] sm:gap-16 sm:px-10 sm:pb-[100px] sm:pt-[100px]"
+      className="relative flex min-h-screen w-full flex-col items-center justify-center gap-12 overflow-hidden bg-surface pb-[64px] pt-[64px] sm:gap-16 sm:pb-[100px] sm:pt-[100px]"
     >
       <Image
         src="/cta-waves.svg"
@@ -16,7 +16,7 @@ export function CTA() {
         className="pointer-events-none object-cover"
       />
 
-      <div className="relative flex w-full flex-1 flex-col items-center justify-center gap-6 text-center">
+      <div className="relative flex w-full flex-1 flex-col items-center justify-center gap-6 px-5 text-center sm:px-10">
         <AvailabilityBadge fullTextOnMobile />
 
         <div className="flex flex-col items-center gap-1">
@@ -48,7 +48,7 @@ export function CTA() {
 
       <div
         style={{ maxWidth: "var(--name-width, 80rem)" }}
-        className="relative w-full pt-2 sm:pt-8"
+        className="relative mx-auto w-full px-5 pt-2 sm:px-10 sm:pt-8"
       >
         <SocialLinks
           direction="row"

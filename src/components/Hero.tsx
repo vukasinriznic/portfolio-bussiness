@@ -162,7 +162,10 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
 
       {/* Desktop hero */}
       <div className="hidden md:flex md:h-full md:w-full">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-end px-6 pb-0 sm:px-10">
+        <div
+          style={{ maxWidth: "var(--name-width, 80rem)" }}
+          className="mx-auto flex w-full flex-col items-center justify-end px-6 pb-0 sm:px-10"
+        >
           <motion.div
             variants={container}
             initial="hidden"
