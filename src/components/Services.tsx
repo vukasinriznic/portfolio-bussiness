@@ -17,7 +17,7 @@ export function Services() {
       id="services"
       className="relative w-full overflow-hidden bg-surface pb-[64px] pt-[96px] sm:pb-[100px] sm:pt-[180px]"
     >
-      <SectionLabel text="Service" />
+      <SectionLabel text="Usluge" />
 
       <div
         style={{ maxWidth: "var(--name-width, 80rem)" }}
@@ -25,7 +25,7 @@ export function Services() {
       >
         <h2 className="mb-10 text-center sm:mb-12">
           <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
-            /Service
+            /Usluge
           </span>
         </h2>
 
@@ -110,7 +110,7 @@ export function Services() {
                       className="absolute right-[102px] top-6 bottom-6 hidden w-40 items-center justify-center overflow-hidden rounded-lg bg-white/10 md:flex lg:top-[48px] lg:bottom-[48px] lg:w-56"
                     >
                       <span className="text-xs font-medium uppercase tracking-wide text-white/30">
-                        Preview
+                        Pregled
                       </span>
                     </motion.div>
                   )}

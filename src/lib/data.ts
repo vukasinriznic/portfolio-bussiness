@@ -2,27 +2,27 @@ export const services = [
   {
     title: "Web Design",
     description:
-      "Clean, modern interfaces designed around your brand and your users, from wireframe to pixel-perfect UI.",
+      "Čist, moderan dizajn interfejsa prilagođen vašem brendu i korisnicima, od wireframe-a do detaljno dorađenog UI-ja.",
   },
   {
     title: "Web Development",
     description:
-      "Fast, responsive websites and web apps built with modern tools like React and Next.js.",
+      "Brzi, responzivni sajtovi i web aplikacije izrađeni pomoću modernih alata poput React-a i Next.js-a.",
   },
   {
     title: "E-Commerce",
     description:
-      "Online stores that are easy to manage and built to convert, from product pages to checkout.",
+      "Onlajn prodavnice jednostavne za upravljanje i napravljene da prodaju, od stranica proizvoda do plaćanja.",
   },
   {
     title: "Performance & SEO",
     description:
-      "Optimized for speed, accessibility, and search visibility, so your site actually gets found.",
+      "Optimizovano za brzinu, pristupačnost i vidljivost na pretraživačima, kako bi vas korisnici zaista pronašli.",
   },
   {
     title: "Maintenance & Support",
     description:
-      "Ongoing updates, fixes, and improvements so your site keeps running smoothly after launch.",
+      "Redovna ažuriranja, ispravke i unapređenja kako bi sajt nesmetano radio i nakon lansiranja.",
   },
 ];
 
