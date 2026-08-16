@@ -8,6 +8,7 @@ import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { SocialLinks } from "@/components/SocialLinks";
 import {
   GithubIcon,
+  InstagramIcon,
   LinkedinIcon,
 } from "@/components/icons/social-icons";
 import { socialLinks } from "@/lib/links";
@@ -40,6 +41,7 @@ const itemText = {
 const mobileSocialIcons = {
   home: Home,
   phone: Phone,
+  instagram: InstagramIcon,
   linkedin: LinkedinIcon,
   github: GithubIcon,
 };

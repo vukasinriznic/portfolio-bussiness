@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Home, Phone } from "lucide-react";
 import {
   GithubIcon,
+  InstagramIcon,
   LinkedinIcon,
 } from "@/components/icons/social-icons";
 import { socialLinks } from "@/lib/links";
@@ -13,6 +14,7 @@ import { socialLinks } from "@/lib/links";
 const icons = {
   home: Home,
   phone: Phone,
+  instagram: InstagramIcon,
   linkedin: LinkedinIcon,
   github: GithubIcon,
 };
