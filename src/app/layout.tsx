@@ -4,6 +4,7 @@ import "lenis/dist/lenis.css";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Cursor } from "@/components/Cursor";
+import { NameWidthSync } from "@/components/NameWidthSync";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -71,6 +72,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         />
         <SmoothScroll />
         <Cursor />
+        <NameWidthSync />
         {children}
       </body>
     </html>

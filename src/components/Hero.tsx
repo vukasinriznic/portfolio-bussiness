@@ -1,6 +1,5 @@
 "use client";
 
-import { useLayoutEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { Home, Phone } from "lucide-react";
@@ -54,25 +53,6 @@ const mobileSocialPosition: Record<string, string> = {
 };
 
 export function Hero({ photoSrc }: { photoSrc: string | null }) {
-  const nameRef = useRef<HTMLSpanElement>(null);
-
-  useLayoutEffect(() => {
-    const el = nameRef.current;
-    if (!el) return;
-
-    const updateWidth = () => {
-      const width = el.getBoundingClientRect().width;
-      if (width > 0) {
-        document.documentElement.style.setProperty("--name-width", `${width}px`);
-      }
-    };
-
-    updateWidth();
-    const observer = new ResizeObserver(updateWidth);
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section id="home" className="relative w-full shrink-0 md:h-screen">
       {/* Mobile hero */}
@@ -177,10 +157,7 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
                 variants={itemText}
                 className="font-display flex select-none justify-center text-center text-[clamp(2rem,7vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-tight"
               >
-                <span
-                  ref={nameRef}
-                  className="inline-flex flex-wrap items-baseline gap-x-6 lg:flex-nowrap lg:whitespace-nowrap"
-                >
+                <span className="inline-flex flex-wrap items-baseline gap-x-6 lg:flex-nowrap lg:whitespace-nowrap">
                   <span className="inline-block origin-bottom scale-y-[1.3] tracking-[0.11em] [paint-order:stroke_fill] text-white [-webkit-text-stroke:2.5px_#111111] lg:[-webkit-text-stroke:3px_#111111]">
                     Vukašin
                   </span>
