@@ -35,9 +35,7 @@ export function Services() {
             return (
               <div
                 key={service.title}
-                onClick={() => {
-                  if (!isOpen) setOpenIndex(index);
-                }}
+                onClick={() => setOpenIndex(isOpen ? null : index)}
                 className={`relative cursor-pointer overflow-hidden border-b border-[#525252] last:border-b-0 transition-all ${ACCORDION_EASE_CSS} ${
                   isOpen ? "rounded-xl bg-[#262626]" : "bg-transparent hover:bg-[#EEEEEE]"
                 }`}
