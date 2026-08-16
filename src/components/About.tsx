@@ -54,7 +54,7 @@ export function About() {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top-=300",
+          start: "top top",
           end: "bottom bottom",
           scrub: 1,
         },
@@ -101,7 +101,7 @@ export function About() {
           >
             <p
               ref={wordsRef}
-              className="font-sans text-left text-[32px] font-medium uppercase leading-tight tracking-normal text-white sm:text-[36px] lg:text-[60px]"
+              className="font-sans text-left text-[31px] font-medium uppercase leading-tight tracking-normal text-white sm:text-[36px] lg:text-[60px]"
             >
               {paragraphWords.map((word, i) => (
                 <span
