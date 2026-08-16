@@ -8,9 +8,9 @@ export const navLinks = [
 export const socialLinks = [
   { label: "Afera", href: "https://www.aferadigital.rs", icon: "home" },
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/vukasinrizniic/",
-    icon: "instagram",
+    label: "Telefon",
+    href: "tel:+381655339481",
+    icon: "phone",
   },
   {
     label: "LinkedIn",

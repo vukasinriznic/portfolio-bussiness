@@ -3,12 +3,11 @@
 import { useLayoutEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
-import { Home } from "lucide-react";
+import { Home, Phone } from "lucide-react";
 import { ProfilePhoto } from "@/components/ProfilePhoto";
 import { SocialLinks } from "@/components/SocialLinks";
 import {
   GithubIcon,
-  InstagramIcon,
   LinkedinIcon,
 } from "@/components/icons/social-icons";
 import { socialLinks } from "@/lib/links";
@@ -40,14 +39,14 @@ const itemText = {
 
 const mobileSocialIcons = {
   home: Home,
-  instagram: InstagramIcon,
+  phone: Phone,
   linkedin: LinkedinIcon,
   github: GithubIcon,
 };
 
 const mobileSocialPosition: Record<string, string> = {
   Afera: "left-4 top-[18%]",
-  Instagram: "left-2 top-[54%]",
+  Telefon: "left-2 top-[54%]",
   LinkedIn: "right-4 top-[26%]",
   GitHub: "right-2 top-[58%]",
 };
@@ -96,12 +95,13 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
 
           {socialLinks.map((social) => {
             const Icon = mobileSocialIcons[social.icon as keyof typeof mobileSocialIcons];
+            const isPhone = social.icon === "phone";
             return (
               <a
                 key={social.label}
                 href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={isPhone ? undefined : "_blank"}
+                rel={isPhone ? undefined : "noopener noreferrer"}
                 className={`absolute z-10 flex items-center gap-[7px] rounded-full bg-white/80 px-[10px] py-2 text-[12px] font-medium text-foreground shadow-[0_2px_12px_rgba(0,0,0,0.1)] backdrop-blur-md ${mobileSocialPosition[social.label]}`}
               >
                 <Icon size={15} strokeWidth={2} />
