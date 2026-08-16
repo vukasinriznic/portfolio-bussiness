@@ -8,12 +8,12 @@ export function Work() {
       id="work"
       className="relative w-full overflow-hidden bg-surface pb-[64px] pt-[96px] sm:pb-[100px] sm:pt-[180px]"
     >
-      <SectionLabel text="Portfolio" />
+      <SectionLabel text="Projekti" />
 
       <div className="relative mx-auto max-w-[1044px] px-5 sm:px-10">
         <h2 className="mb-10 text-center sm:mb-12">
           <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
-            /Selected Work
+            /Moji projekti
           </span>
         </h2>
 
