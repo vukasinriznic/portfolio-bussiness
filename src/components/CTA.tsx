@@ -21,13 +21,13 @@ export function CTA() {
 
         <div className="flex flex-col items-center gap-1">
           <h2 className="font-sans text-[28px] font-extrabold uppercase leading-tight tracking-tight text-foreground sm:whitespace-nowrap sm:text-[42px] lg:text-[64px]">
-            Have a project in mind?
+            Imate projekat na umu?
           </h2>
 
           <p className="max-w-xl text-[14px] leading-relaxed text-[#525252] sm:text-[20px]">
-            Whether you&apos;re launching something new, improving an
-            existing product, or exploring a fresh idea, I&apos;d love to
-            help bring your vision to life.
+            Bilo da vam treba nov sajt, redizajn postojećeg ili samo imate
+            ideju koju želite da razvijemo zajedno, tu sam da pomognem da ona
+            zaživi.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export function CTA() {
           href="mailto:riznicvukasin@gmail.com"
           className="group mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3 text-[15px] font-normal text-background transition-colors hover:bg-foreground/85 sm:text-base"
         >
-          Start a Conversation
+          Započnimo saradnju
           <Image
             src="/top-right.png"
             alt=""
