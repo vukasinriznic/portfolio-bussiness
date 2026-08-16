@@ -42,9 +42,9 @@ export function SocialLinks({
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 rounded-full border border-border bg-white py-2 pl-2 pr-4 text-base font-normal text-foreground shadow-sm transition-colors hover:border-foreground/20"
+                className="group flex items-center gap-2.5 rounded-full border border-border bg-white py-2 pl-2 pr-4 text-base font-normal text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost text-foreground transition-colors group-hover:bg-foreground group-hover:text-white">
                   <Icon size={13} strokeWidth={2} />
                 </span>
                 {social.label}
@@ -61,9 +61,9 @@ export function SocialLinks({
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2.5 rounded-full border border-border bg-white py-2 pl-2 pr-4 text-base font-normal text-foreground shadow-sm transition-colors hover:border-foreground/20"
+                className="group flex items-center gap-2.5 rounded-full border border-border bg-white py-2 pl-2 pr-4 text-base font-normal text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:border-foreground/20 hover:shadow-md"
               >
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost text-foreground transition-colors group-hover:bg-foreground group-hover:text-white">
                   <Icon size={13} strokeWidth={2} />
                 </span>
                 {social.label}

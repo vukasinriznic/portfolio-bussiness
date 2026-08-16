@@ -63,7 +63,7 @@ export function About() {
           scale: 16,
           opacity: 0,
           ease: "power1.in",
-          duration: 1,
+          duration: 4,
         })
         .fromTo(
           textRef.current,
