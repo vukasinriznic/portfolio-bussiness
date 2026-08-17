@@ -50,7 +50,13 @@ function SocialLinkItem({ social }: { social: (typeof socialLinks)[number] }) {
         <span className="flex h-6 w-6 items-center justify-center rounded-full bg-ghost">
           <Icon size={13} strokeWidth={2} />
         </span>
-        {social.label}
+        {social.label === "Afera Digital" ? (
+          <>
+            Afera<span className="hidden min-[372px]:inline"> Digital</span>
+          </>
+        ) : (
+          social.label
+        )}
       </a>
 
       {isPhone && (
