@@ -43,6 +43,8 @@ export function Services() {
                 whileInView="show"
                 viewport={viewportOnce}
                 variants={fadeUp}
+              >
+              <div
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 className={`relative cursor-pointer overflow-hidden border-b border-[#525252] last:border-b-0 transition-all ${ACCORDION_EASE_CSS} ${
                   isOpen ? "rounded-xl bg-[#262626]" : "bg-transparent hover:bg-[#EEEEEE]"
@@ -137,6 +139,7 @@ export function Services() {
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
               </motion.div>
             );
           })}

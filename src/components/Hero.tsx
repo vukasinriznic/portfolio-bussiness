@@ -123,20 +123,21 @@ export function Hero({ photoSrc }: { photoSrc: string | null }) {
             koje su jednostavne za korišćenje i napravljene da traju.
           </motion.p>
 
-          <motion.a
-            variants={item}
-            href="/kontakt"
-            className="group mt-2 flex w-full max-w-[280px] items-center justify-center gap-2.5 rounded-full bg-foreground px-6 py-[14px] text-[15px] font-normal text-background shadow-[0_4px_5px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md"
-          >
-            Započnimo saradnju
-            <Image
-              src="/top-right.png"
-              alt=""
-              width={12}
-              height={12}
-              className="invert transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </motion.a>
+          <motion.div variants={item} className="mt-2 w-full max-w-[280px]">
+            <a
+              href="/kontakt"
+              className="group flex w-full items-center justify-center gap-2.5 rounded-full bg-foreground px-6 py-[14px] text-[15px] font-normal text-background shadow-[0_4px_5px_rgba(0,0,0,0.2)] transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md"
+            >
+              Započnimo saradnju
+              <Image
+                src="/top-right.png"
+                alt=""
+                width={12}
+                height={12}
+                className="invert transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </a>
+          </motion.div>
         </motion.div>
       </div>
 
