@@ -55,7 +55,7 @@ const personJsonLd = {
   url: SITE_URL,
   image: `${SITE_URL}/images/vukasin_hero.png`,
   sameAs: [
-    "https://www.aferadigital.rs",
+    "https://www.instagram.com/afera.digital/",
     "https://www.instagram.com/vukasinrizniic/",
     "https://www.linkedin.com/in/vukasinriznic/",
     "https://github.com/vukasinriznic",
@@ -63,7 +63,7 @@ const personJsonLd = {
   worksFor: {
     "@type": "Organization",
     name: "Afera Digital",
-    sameAs: "https://www.aferadigital.rs",
+    sameAs: "https://www.instagram.com/afera.digital/",
   },
 };
 

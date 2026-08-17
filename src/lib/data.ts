@@ -7,7 +7,7 @@ export const services = [
   {
     title: "Web Development",
     description:
-      "Brzi, responzivni sajtovi i web aplikacije izrađeni pomoću modernih alata poput React-a i Next.js-a.",
+      "Brzi, responzivni sajtovi i web aplikacije izrađeni pomoću modernih alata poput React-a, Next.js-a i FastAPI-a.",
   },
   {
     title: "E-Commerce",
