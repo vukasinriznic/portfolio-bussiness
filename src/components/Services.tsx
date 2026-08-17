@@ -4,6 +4,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Image from "next/image";
 import { SectionLabel } from "@/components/SectionLabel";
+import { Reveal } from "@/components/motion/Reveal";
+import { fadeUp, viewportOnce } from "@/lib/motion";
 import { services } from "@/lib/data";
 
 const ACCORDION_TRANSITION = { duration: 0.5, ease: [0.22, 1, 0.36, 1] } as const;
@@ -23,18 +25,24 @@ export function Services() {
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="relative mx-auto px-5 sm:px-10"
       >
-        <h2 className="mb-10 text-center sm:mb-12">
-          <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
-            /Usluge
-          </span>
-        </h2>
+        <Reveal className="mb-10 text-center sm:mb-12">
+          <h2>
+            <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
+              /Usluge
+            </span>
+          </h2>
+        </Reveal>
 
         <div className="flex flex-col">
           {services.map((service, index) => {
             const isOpen = openIndex === index;
             return (
-              <div
+              <motion.div
                 key={service.title}
+                initial="hidden"
+                whileInView="show"
+                viewport={viewportOnce}
+                variants={fadeUp}
                 onClick={() => setOpenIndex(isOpen ? null : index)}
                 className={`relative cursor-pointer overflow-hidden border-b border-[#525252] last:border-b-0 transition-all ${ACCORDION_EASE_CSS} ${
                   isOpen ? "rounded-xl bg-[#262626]" : "bg-transparent hover:bg-[#EEEEEE]"
@@ -129,7 +137,7 @@ export function Services() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </div>
+              </motion.div>
             );
           })}
         </div>

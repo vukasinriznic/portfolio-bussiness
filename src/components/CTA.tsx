@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 import { SocialLinks } from "@/components/SocialLinks";
+import { Reveal } from "@/components/motion/Reveal";
+import { RevealGroup } from "@/components/motion/RevealGroup";
+import { RevealItem } from "@/components/motion/RevealItem";
 
 export function CTA() {
   return (
@@ -16,10 +19,12 @@ export function CTA() {
         className="pointer-events-none object-cover"
       />
 
-      <div className="relative flex w-full flex-1 flex-col items-center justify-center gap-6 px-5 text-center sm:px-10">
-        <AvailabilityBadge fullTextOnMobile />
+      <RevealGroup className="relative flex w-full flex-1 flex-col items-center justify-center gap-6 px-5 text-center sm:px-10">
+        <RevealItem>
+          <AvailabilityBadge fullTextOnMobile />
+        </RevealItem>
 
-        <div className="flex flex-col items-center gap-1">
+        <RevealItem className="flex flex-col items-center gap-1">
           <h2 className="font-sans text-[28px] font-extrabold uppercase leading-tight tracking-tight text-foreground sm:whitespace-nowrap sm:text-[42px] lg:text-[64px]">
             Imate projekat na umu?
           </h2>
@@ -29,24 +34,26 @@ export function CTA() {
             ideju koju želite da razvijemo zajedno, tu sam da pomognem da ona
             zaživi.
           </p>
-        </div>
+        </RevealItem>
 
-        <a
-          href="/kontakt"
-          className="group mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3 text-[15px] font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md sm:text-base"
-        >
-          Započnimo saradnju
-          <Image
-            src="/top-right.png"
-            alt=""
-            width={12}
-            height={12}
-            className="invert transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-          />
-        </a>
-      </div>
+        <RevealItem>
+          <a
+            href="/kontakt"
+            className="group mt-4 inline-flex items-center gap-2 rounded-full bg-foreground px-7 py-3 text-[15px] font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md sm:text-base"
+          >
+            Započnimo saradnju
+            <Image
+              src="/top-right.png"
+              alt=""
+              width={12}
+              height={12}
+              className="invert transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            />
+          </a>
+        </RevealItem>
+      </RevealGroup>
 
-      <div
+      <Reveal
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="relative mx-auto w-full px-5 pt-2 sm:px-10 sm:pt-8"
       >
@@ -65,7 +72,7 @@ export function CTA() {
             </span>
           }
         />
-      </div>
+      </Reveal>
     </section>
   );
 }

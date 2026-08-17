@@ -5,11 +5,17 @@ import { ArrowLeft } from "lucide-react";
 import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 import { ContactForm } from "@/components/ContactForm";
 import { SocialLinks } from "@/components/SocialLinks";
+import { Reveal } from "@/components/motion/Reveal";
+import { RevealItem } from "@/components/motion/RevealItem";
+import { LoadGroup } from "@/components/motion/LoadGroup";
 
 export const metadata: Metadata = {
   title: "Kontakt — Vukašin Riznić",
   description:
     "Pošaljite detalje o vašem projektu i Vukašin Riznić će vam odgovoriti u roku od 24h.",
+  alternates: {
+    canonical: "/kontakt",
+  },
 };
 
 export default function KontaktPage() {
@@ -23,37 +29,43 @@ export default function KontaktPage() {
         className="pointer-events-none object-cover"
       />
 
-      <div
+      <LoadGroup
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="relative mx-auto flex w-full items-center justify-between px-5 pb-5 pt-7 sm:px-10 sm:pt-8"
       >
-        <Link
-          href="/"
-          className="group inline-flex items-center gap-2 rounded-full border border-border bg-white py-3 pl-4 pr-5 text-[15px] font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
-        >
-          <ArrowLeft
-            size={16}
-            className="transition-transform group-hover:-translate-x-0.5"
-          />
-          Nazad
-        </Link>
-        <AvailabilityBadge />
-      </div>
+        <RevealItem>
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-2 rounded-full border border-border bg-white py-3 pl-4 pr-5 text-[15px] font-medium text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+          >
+            <ArrowLeft
+              size={16}
+              className="transition-transform group-hover:-translate-x-0.5"
+            />
+            Nazad
+          </Link>
+        </RevealItem>
+        <RevealItem>
+          <AvailabilityBadge />
+        </RevealItem>
+      </LoadGroup>
 
       <div className="relative mx-auto w-full max-w-3xl px-5 pb-16 pt-8 sm:px-10 sm:pb-24">
-        <h1 className="font-sans text-[56px] font-extrabold uppercase leading-tight tracking-tight text-foreground">
-          Hajde da diskutujemo o vašem projektu
-        </h1>
-        <p className="mt-1 text-[20px] leading-relaxed text-[#525252]">
-          Recite mi više o projektu, brzo odgovaram.
-        </p>
+        <Reveal>
+          <h1 className="font-sans text-[56px] font-extrabold uppercase leading-tight tracking-tight text-foreground">
+            Hajde da diskutujemo o vašem projektu
+          </h1>
+          <p className="mt-1 text-[20px] leading-relaxed text-[#525252]">
+            Recite mi više o projektu, brzo odgovaram.
+          </p>
+        </Reveal>
 
-        <div className="mt-4">
+        <Reveal className="mt-4">
           <ContactForm />
-        </div>
+        </Reveal>
       </div>
 
-      <div
+      <Reveal
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="relative mx-auto w-full px-5 pb-16 pt-8 sm:px-10 sm:pb-24"
       >
@@ -72,7 +84,7 @@ export default function KontaktPage() {
             </span>
           }
         />
-      </div>
+      </Reveal>
     </div>
   );
 }

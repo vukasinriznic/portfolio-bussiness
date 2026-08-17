@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { SectionLabel } from "@/components/SectionLabel";
 import { ProjectCard } from "@/components/ProjectCard";
+import { Reveal } from "@/components/motion/Reveal";
+import { RevealGroup } from "@/components/motion/RevealGroup";
+import { RevealItem } from "@/components/motion/RevealItem";
 import { projects } from "@/lib/data";
 
 export function Work() {
@@ -12,19 +15,23 @@ export function Work() {
       <SectionLabel text="Projekti" />
 
       <div className="relative mx-auto max-w-[1044px] px-5 sm:px-10">
-        <h2 className="mb-10 text-center sm:mb-12">
-          <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
-            /Moji projekti
-          </span>
-        </h2>
+        <Reveal className="mb-10 text-center sm:mb-12">
+          <h2>
+            <span className="font-sans inline-block text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
+              /Moji projekti
+            </span>
+          </h2>
+        </Reveal>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
+        <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
           {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+            <RevealItem key={project.title}>
+              <ProjectCard project={project} />
+            </RevealItem>
           ))}
-        </div>
+        </RevealGroup>
 
-        <div className="mt-10 flex justify-center sm:mt-12">
+        <Reveal className="mt-10 flex justify-center sm:mt-12">
           <a
             href="/projekti"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-[15px] font-semibold text-foreground shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:text-base"
@@ -38,7 +45,7 @@ export function Work() {
               className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
             />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

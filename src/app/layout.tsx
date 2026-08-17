@@ -5,6 +5,7 @@ import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Cursor } from "@/components/Cursor";
 import { NameWidthSync } from "@/components/NameWidthSync";
+import { SITE_URL } from "@/lib/site";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -21,16 +22,18 @@ const inter = Inter({
 const title = "Vukašin Riznić — Web Developer";
 const description =
   "Web developer koji dizajnira i razvija brze, pristupačne sajtove i web aplikacije, izrađene da traju.";
-const siteUrl = "https://www.vukasinriznic.me";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title,
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title,
     description,
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "Vukašin Riznić",
     images: [{ url: "/images/vukasin_hero.png", width: 1254, height: 1254 }],
     locale: "sr_RS",
@@ -49,14 +52,19 @@ const personJsonLd = {
   "@type": "Person",
   name: "Vukašin Riznić",
   jobTitle: "Web Developer",
-  url: siteUrl,
-  image: `${siteUrl}/images/vukasin_hero.png`,
+  url: SITE_URL,
+  image: `${SITE_URL}/images/vukasin_hero.png`,
   sameAs: [
     "https://www.aferadigital.rs",
     "https://www.instagram.com/vukasinrizniic/",
     "https://www.linkedin.com/in/vukasinriznic/",
     "https://github.com/vukasinriznic",
   ],
+  worksFor: {
+    "@type": "Organization",
+    name: "Afera Digital",
+    sameAs: "https://www.aferadigital.rs",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

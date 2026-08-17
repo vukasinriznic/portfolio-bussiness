@@ -15,25 +15,25 @@ import { socialLinks } from "@/lib/links";
 const container = {
   hidden: {},
   show: {
-    transition: { staggerChildren: 0.09, delayChildren: 0.15 },
+    transition: { staggerChildren: 0.08, delayChildren: 0.15 },
   },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 28 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 } as const;
 
 const itemText = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 28 },
   show: {
     opacity: 1,
     y: -44,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
   },
 } as const;
 
@@ -46,7 +46,7 @@ const mobileSocialIcons = {
 };
 
 const mobileSocialPosition: Record<string, string> = {
-  Afera: "left-4 top-[18%]",
+  "Afera Digital": "left-4 top-[18%]",
   Telefon: "left-2 top-[54%]",
   LinkedIn: "right-4 top-[26%]",
   GitHub: "right-2 top-[58%]",
