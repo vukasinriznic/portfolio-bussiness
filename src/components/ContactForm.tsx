@@ -19,9 +19,9 @@ const urgencyOptions = [
 type Status = "idle" | "sending" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-md border border-border bg-white px-4 py-3 text-[16px] text-foreground placeholder:text-[#a2a2a2] transition-colors focus:border-foreground/40 focus:outline-none";
+  "w-full rounded-md border border-border bg-white px-4 py-3 text-[14px] sm:text-[16px] text-foreground placeholder:text-[#a2a2a2] transition-colors focus:border-foreground/40 focus:outline-none";
 
-const labelClass = "mb-2 block text-[16px] font-medium text-foreground";
+const labelClass = "mb-2 block text-[14px] sm:text-[16px] font-medium text-foreground";
 
 function PillGroup({
   options,
@@ -41,7 +41,7 @@ function PillGroup({
             key={option.value}
             type="button"
             onClick={() => onSelect(option.value)}
-            className={`rounded-full border px-4 py-2 text-[16px] font-medium transition-all hover:-translate-y-0.5 hover:shadow-md ${
+            className={`rounded-full border px-4 py-2 text-[14px] sm:text-[16px] font-medium transition-all hover:-translate-y-0.5 hover:shadow-md ${
               isSelected
                 ? "border-foreground bg-foreground text-background"
                 : "border-border bg-white text-foreground"
@@ -102,8 +102,8 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="rounded-md border border-[#525252] bg-white p-8 text-left shadow-sm sm:p-10">
-        <p className="text-[16px] font-semibold text-foreground">Poruka je poslata!</p>
-        <p className="mt-2 text-[16px] text-[#525252]">
+        <p className="text-[14px] sm:text-[16px] font-semibold text-foreground">Poruka je poslata!</p>
+        <p className="mt-2 text-[14px] sm:text-[16px] text-[#525252]">
           Hvala vam, javiću vam se u roku od 24h.
         </p>
       </div>
@@ -173,7 +173,7 @@ export function ContactForm() {
         <button
           type="submit"
           disabled={status === "sending"}
-          className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-7 py-3 text-[16px] font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
+          className="group inline-flex w-full items-center justify-center gap-2 rounded-full bg-foreground px-7 py-3 text-[14px] sm:text-[16px] font-normal text-background transition-all hover:-translate-y-0.5 hover:bg-foreground/85 hover:shadow-md disabled:pointer-events-none disabled:opacity-60 sm:w-auto"
         >
           {status === "sending" ? "Šaljem..." : "Pošaljite poruku"}
         </button>

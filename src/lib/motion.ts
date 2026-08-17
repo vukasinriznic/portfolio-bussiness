@@ -14,4 +14,8 @@ export const staggerContainer = {
   },
 } as const;
 
-export const viewportOnce = { once: true, amount: 0.2 } as const;
+export const viewportOnce = {
+  once: true,
+  amount: 0.1,
+  margin: "20% 0px 20% 0px",
+} as const;

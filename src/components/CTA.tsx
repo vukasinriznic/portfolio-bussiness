@@ -26,7 +26,7 @@ export function CTA() {
 
         <RevealItem className="flex flex-col items-center gap-1">
           <h2 className="font-sans text-[28px] font-extrabold uppercase leading-tight tracking-tight text-foreground sm:whitespace-nowrap sm:text-[42px] lg:text-[64px]">
-            Imate projekat na umu?
+            Treba vam web sajt?
           </h2>
 
           <p className="max-w-xl text-[14px] leading-relaxed text-[#525252] sm:text-[20px]">

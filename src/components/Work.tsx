@@ -2,8 +2,6 @@ import Image from "next/image";
 import { SectionLabel } from "@/components/SectionLabel";
 import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/motion/Reveal";
-import { RevealGroup } from "@/components/motion/RevealGroup";
-import { RevealItem } from "@/components/motion/RevealItem";
 import { projects } from "@/lib/data";
 
 export function Work() {
@@ -23,13 +21,13 @@ export function Work() {
           </h2>
         </Reveal>
 
-        <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
           {projects.map((project) => (
-            <RevealItem key={project.title}>
+            <Reveal key={project.title}>
               <ProjectCard project={project} />
-            </RevealItem>
+            </Reveal>
           ))}
-        </RevealGroup>
+        </div>
 
         <Reveal className="mt-10 flex justify-center sm:mt-12">
           <a

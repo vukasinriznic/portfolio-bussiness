@@ -5,7 +5,6 @@ import { AvailabilityBadge } from "@/components/AvailabilityBadge";
 import { ProjectCard } from "@/components/ProjectCard";
 import { CTA } from "@/components/CTA";
 import { Reveal } from "@/components/motion/Reveal";
-import { RevealGroup } from "@/components/motion/RevealGroup";
 import { RevealItem } from "@/components/motion/RevealItem";
 import { LoadGroup } from "@/components/motion/LoadGroup";
 import { projects } from "@/lib/data";
@@ -57,7 +56,7 @@ export default function ProjektiPage() {
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="mx-auto w-full px-5 pb-6 pt-8 sm:px-10"
       >
-        <h1 className="font-sans text-[40px] font-semibold uppercase tracking-tight text-foreground sm:text-[64px] lg:text-[80px]">
+        <h1 className="font-sans text-[32px] font-semibold uppercase tracking-tight text-foreground sm:text-[56px]">
           /Svi projekti
         </h1>
         <p className="mt-2 text-[15px] font-medium text-[#525252] sm:text-lg">
@@ -69,13 +68,13 @@ export default function ProjektiPage() {
         style={{ maxWidth: "var(--name-width, 80rem)" }}
         className="mx-auto w-full px-5 pb-16 sm:px-10 sm:pb-[100px]"
       >
-        <RevealGroup className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3">
           {projects.map((project) => (
-            <RevealItem key={project.title}>
+            <Reveal key={project.title}>
               <ProjectCard project={project} />
-            </RevealItem>
+            </Reveal>
           ))}
-        </RevealGroup>
+        </div>
       </div>
 
       <CTA />
