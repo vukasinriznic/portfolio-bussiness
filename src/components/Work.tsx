@@ -22,9 +22,9 @@ export function Work() {
         </Reveal>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
-          {projects.map((project) => (
+          {projects.filter((project) => project.featured).map((project) => (
             <Reveal key={project.title}>
-              <ProjectCard project={project} />
+              <ProjectCard project={project} sizes="(min-width: 640px) 62vw, 100vw" />
             </Reveal>
           ))}
         </div>

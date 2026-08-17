@@ -3,22 +3,27 @@ import type { projects } from "@/lib/data";
 
 export function ProjectCard({
   project,
+  sizes = "(min-width: 1024px) 42vw, (min-width: 640px) 62vw, 100vw",
 }: {
   project: (typeof projects)[number];
+  sizes?: string;
 }) {
   return (
-    <article className="group cursor-pointer overflow-hidden bg-white p-[2px] transition-shadow hover:shadow-md">
-      <div className="relative h-[200px] w-full overflow-hidden bg-ghost sm:h-[250px] lg:h-[300px]">
-        <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ghost via-border to-ghost transition-transform duration-500 ease-out group-hover:scale-105">
-          <span className="font-display select-none text-5xl font-extrabold text-white/70">
-            {project.title
-              .split(" ")
-              .slice(-2)
-              .map((w) => w[0])
-              .join("")
-              .toUpperCase()}
-          </span>
-        </div>
+    <a
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block cursor-pointer overflow-hidden bg-white p-[2px] transition-shadow hover:shadow-md"
+    >
+      <div className="relative aspect-video w-full overflow-hidden bg-ghost">
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          quality={90}
+          sizes={sizes}
+          className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-105"
+        />
 
         <div className="absolute inset-0 bg-black opacity-0 transition-opacity duration-300 group-hover:opacity-20" />
 
@@ -44,6 +49,6 @@ export function ProjectCard({
           ))}
         </div>
       </div>
-    </article>
+    </a>
   );
 }

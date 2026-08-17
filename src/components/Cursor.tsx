@@ -30,8 +30,8 @@ export function Cursor() {
     };
     const handleLeave = () => setVisible(false);
 
-    window.addEventListener("mousemove", handleMove);
-    document.documentElement.addEventListener("mouseleave", handleLeave);
+    window.addEventListener("mousemove", handleMove, { passive: true });
+    document.documentElement.addEventListener("mouseleave", handleLeave, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMove);
       document.documentElement.removeEventListener("mouseleave", handleLeave);

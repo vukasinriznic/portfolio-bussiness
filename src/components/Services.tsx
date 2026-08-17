@@ -57,7 +57,7 @@ export function Services() {
                 >
                   <span
                     className={`flex-1 font-sans text-[20px] font-medium uppercase leading-tight tracking-normal transition-colors ${ACCORDION_EASE_CSS} sm:truncate sm:text-[36px] lg:text-[64px] ${
-                      isOpen ? "text-white md:max-w-[calc(100%-224px)] lg:max-w-[calc(100%-288px)]" : "text-foreground"
+                      isOpen ? "text-white md:max-w-[calc(100%-325px)] lg:max-w-[calc(100%-425px)]" : "text-foreground"
                     }`}
                   >
                     {service.title}
@@ -115,11 +115,16 @@ export function Services() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={ACCORDION_TRANSITION}
-                      className="absolute right-[102px] top-6 bottom-6 hidden w-40 items-center justify-center overflow-hidden rounded-lg bg-white/10 md:flex lg:top-[48px] lg:bottom-[48px] lg:w-56"
+                      className="absolute right-[105px] top-6 bottom-6 hidden w-52 overflow-hidden rounded-lg bg-white/10 md:block lg:top-[48px] lg:bottom-[48px] lg:w-72"
                     >
-                      <span className="text-xs font-medium uppercase tracking-wide text-white/30">
-                        Pregled
-                      </span>
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        quality={90}
+                        sizes="1024px"
+                        className="object-cover object-top"
+                      />
                     </motion.div>
                   )}
                 </AnimatePresence>
