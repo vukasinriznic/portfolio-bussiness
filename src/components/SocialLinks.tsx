@@ -52,7 +52,7 @@ function SocialLinkItem({ social }: { social: (typeof socialLinks)[number] }) {
         </span>
         {social.label === "Afera Digital" ? (
           <>
-            Afera<span className="hidden min-[372px]:inline"> Digital</span>
+            Afera<span className="hidden min-[372px]:inline">Digital</span>
           </>
         ) : (
           social.label
