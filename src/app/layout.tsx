@@ -19,7 +19,7 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 });
 
-const title = "Vukašin Riznić — Web Developer";
+const title = "Vukašin Riznić | Web Developer";
 const description =
   "Web developer koji dizajnira i razvija brze, pristupačne sajtove i web aplikacije, izrađene da traju.";
 
@@ -73,7 +73,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="sr"
       className={`${syne.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col cursor-none bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col cursor-none bg-background text-foreground"
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

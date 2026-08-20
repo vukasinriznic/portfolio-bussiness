@@ -10,7 +10,7 @@ import { RevealItem } from "@/components/motion/RevealItem";
 import { LoadGroup } from "@/components/motion/LoadGroup";
 
 export const metadata: Metadata = {
-  title: "Kontakt — Vukašin Riznić",
+  title: "Kontakt | Vukašin Riznić",
   description:
     "Pošaljite detalje o vašem projektu i Vukašin Riznić će vam odgovoriti u roku od 24h.",
   alternates: {

@@ -10,7 +10,7 @@ import { LoadGroup } from "@/components/motion/LoadGroup";
 import { projects } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Svi projekti — Vukašin Riznić",
+  title: "Svi projekti | Vukašin Riznić",
   description:
     "Pregled svih projekata koje je Vukašin Riznić dizajnirao i razvijao.",
   alternates: {
